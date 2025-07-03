@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<BaseLayout>
+	<section id="hero" class="py-20 max-w-4xl mx-auto px-2">
+	<p class="text-sm text-[var(--color-accent)] font-medium mb-2 animate-fadeInDelay">Hola, mi nombre es</p>
+
+	<h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight text-[var(--color-text)] animate-fadeIn">
+		Alejandro Sanz Antunez
+	</h1>
+
+	<h2 class="text-3xl sm:text-4xl font-bold text-zinc-700 mt-2 animate-fadeInDelay" style="animation-delay: 0.3s;">
+		Desarrollador web con formación completa y enfoque en soluciones modernas.	
+	</h2>
+
+	<p class="text-base sm:text-lg text-zinc-600 mt-6 max-w-xl animate-fadeInDelay" style="animation-delay: 0.6s;">
+ 		Soy Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM) y Desarrollo de Aplicaciones Web (DAW), con especial interés en crear experiencias digitales modernas, accesibles y bien estructuradas. Actualmente trabajo con tecnologías como <strong>Astro</strong>, <strong>Tailwind CSS</strong> y <strong>JavaScript</strong>, y sigo ampliando mis conocimientos de forma constante.	
+	</p>
+	<a href="#projects" class="inline-block mt-10 bg-[var(--color-accent)] text-white px-6 py-3 rounded-full font-medium shadow hover:bg-[var(--color-accent-light)] transition animate-fadeInDelay" style="animation-delay: 0.9s;">
+		Ver proyectos
+	</a>
+	</section>
+
+	<section id="about" class="py-32 max-w-3xl mx-auto px-6">
+	<h2 class="text-2xl sm:text-3xl font-bold text-[var(--color-accent)] mb-6 animate-fadeIn">
+		Sobre mí
+	</h2>
+
+	<p class="text-base sm:text-lg text-zinc-700 mb-6 leading-relaxed animate-fadeInDelay" style="animation-delay: 0.2s;">
+		Aunque mi trayectoria profesional comenzó en el mundo de la hostelería, descubrí mi pasión por el desarrollo de software al iniciar un curso de <strong>Python</strong>. A partir de ahí, decidí apostar por este camino y cursé el <strong>Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)</strong>. Tras finalizarlo, y mientras esperaba comenzar las prácticas, aproveché el tiempo para sacarme también el <strong>Grado Superior en Desarrollo de Aplicaciones Web (DAW)</strong>.	</p>
+
+	<p class="text-base sm:text-lg text-zinc-700 mb-6 leading-relaxed animate-fadeInDelay" style="animation-delay: 0.4s;">
+		Actualmente estoy realizando mis prácticas de DAM, donde estoy trabajando con tecnologías como <strong>Astro</strong>, <strong>Tailwind CSS</strong>, <strong>JavaScript</strong>, <strong>Git</strong> y <strong>GitHub</strong>. Además, por iniciativa propia, he completado cursos de <strong>testing</strong>, aprendiendo herramientas como <strong>Jira</strong>, <strong>Postman</strong> y <strong>Selenium</strong>.	</p>
+
+	<p class="text-base sm:text-lg text-zinc-700 leading-relaxed animate-fadeInDelay" style="animation-delay: 0.6s;">
+		A lo largo de mi formación también he trabajado con <strong>PHP</strong>, <strong>Java</strong> y <strong>Android Studio</strong>. Me apasiona seguir aprendiendo y mejorar constantemente. Mi objetivo es combinar creatividad y lógica para construir soluciones digitales que aporten valor real a las personas.	</p>
+	</section>
+
+	<section id="projects" class="py-32 max-w-5xl mx-auto px-6">
+	<h2 class="text-2xl sm:text-3xl font-bold text-[var(--color-accent)] mb-12 animate-fadeIn">
+		Proyectos Destacados
+	</h2>
+
+	<div class="grid gap-12 sm:grid-cols-1 md:grid-cols-2">
+		<!-- Proyecto 1
+		<div class="bg-white border border-zinc-200 rounded-xl p-6 shadow-sm hover:shadow-md transition animate-fadeInDelay" style="animation-delay: 0.2s;">
+		<h3 class="text-xl font-semibold text-[var(--color-text)] mb-2">Nombre del Proyecto</h3>
+		<p class="text-zinc-600 text-sm leading-relaxed mb-4">
+			Breve descripción del proyecto. Qué resolvía, qué tecnologías usaste, y qué impacto tuvo.
+		</p>
+		<div class="flex flex-wrap gap-2 text-xs font-medium text-[var(--color-accent)]">
+			<span>React</span>
+			<span>Tailwind</span>
+			<span>Astro</span>
+		</div>
+		<div class="mt-4 flex gap-4 text-sm text-[var(--color-accent)]">
+			<a href="#" target="_blank" class="hover:underline">🔗 Demo</a>
+			<a href="#" target="_blank" class="hover:underline">📂 GitHub</a>
+		</div>
+		</div> -->
+
+		<ProjectCard
+		title="Portafolio Personal"
+		description="Sitio web desarrollado con Astro y Tailwind. Optimizado para performance y accesibilidad."
+		tech={["Astro", "Tailwind", "Js"]}
+		demoUrl="https://tusitio.dev"
+		githubUrl="https://github.com/tuusuario/portafolio"
+		imageUrl="/images/Portafolio.png"
+		/>
+		<ProjectCard 
+		title="Proyecto freelancer"
+		description = "Proyecto personal de un portafolios básico"
+		tech={["HTML","CSS"]}
+		demoUrl="https://alejandrosanz.netlify.app/"
+		githubUrl="https://github.com/tuusuario/portafolio"
+		imageUrl="/images/Freelancer.png"
+		/>
+		<ProjectCard 
+		tittle="Burgersite"
+		description = "Pagina web de una tienda de hamburguesas"
+		tech={["HTML","CSS","JS"]}
+		demoUrl="https://burrgersite.netlify.app/"
+		githubUrl="https://github.com/tuusuario/portafolio"
+		imageUrl="/images/hamburguesa.png"
+		/>
+		<ProjectCard 
+		tittle="DevTshirts"
+		description = "Pagina web de una tienda de ropa online"
+		tech={["HTML","CSS","JS"]}
+		demoUrl="https://devtshirts.netlify.app/"
+		githubUrl="https://github.com/tuusuario/portafolio"
+		imageUrl="/images/ropa.png"
+		/>
+
+
+	</div>
+	</section>
+	<section id="contact" class="py-20 px-6 max-w-2xl mx-auto text-center">
+	<h2 class="text-2xl sm:text-3xl font-bold text-[var(--color-accent)] mb-6">
+		¿Hablamos?
+	</h2>
+
+	<p class="text-zinc-700 text-base sm:text-lg mb-8 leading-relaxed">
+		Si estás interesado en colaborar, tienes un proyecto en mente, o simplemente quieres saludar, no dudes en escribirme. Estoy abierto a oportunidades laborales o freelance.
+	</p>
+
+	<a
+		href="mailto:tuemail@correo.com"
+		class="inline-block bg-[var(--color-accent)] text-white px-6 py-3 rounded-full font-medium shadow hover:bg-[var(--color-accent-light)] transition"
+	>
+		📬 Envíame un correo
+	</a>
+
+	</section>
+
+
+
+
+</BaseLayout>
